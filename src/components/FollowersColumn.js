@@ -7,7 +7,7 @@ const FollowersColumn = (topFiveFollowing) => {
         <div className='followerscol'>
             <div className='followers-section'>
                 <div className="home"/>
-                <h2 className='bold-green'>For You</h2>
+                <h2 className='bold-red'>For You</h2>
             </div>
 
         <div className='followers-section'>
@@ -19,10 +19,10 @@ const FollowersColumn = (topFiveFollowing) => {
 
         <p>Your Top Accounts</p>
             {users && users.map(user =>(
-                <UsersCard key={user} user={user}
+                <UsersCard key={user.id} user={user}
                 />
             ))}
-
+            <hr/>
         </div>
     )
 }
