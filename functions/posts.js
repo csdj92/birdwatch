@@ -22,7 +22,7 @@ const astraClient = await createClient({
         
         return {
             statusCode: 200,
-            body: JSON.stringify(res)
+            body: JSON.stringify(Object.keys(res).map((i) => res[i]))
         }
     } catch (error) {
         console.log(error);
